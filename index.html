@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <title>WeatherApp</title>
+  <script type="application/javascript"
+    src="https://cdn.jsdelivr.net/npm/country-codes-list@1.14.0/dist/country-codes.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="weather__header">
+      <form class="weather__search">
+        <input type="text" placeholder="Search for a city..." id="city" class="weather__searchform">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </form>
+      <div class="weather__units">
+        <span class="weather_unit_celsius">&#176;C</span>
+        <span class="line"></span>
+        <span class="weather_unit_farenheit active">&#176;F</span>
+      </div>
+    </div>
+    <div class="weather__body">
+      <h1 class="weather__city"></h1>
+      <div class="weather__datetime">
+      </div>
+      <div class="weather__forecast"></div>
+      <div class="weather__icon">
+      </div>
+      <p class="weather__temperature">
+      </p>
+      <div class="weather__minmax">
+        <p>Min: 12&#176;</p>
+        <p>Max: 16&#176;</p>
+      </div>
+    </div>
+    <div class="hourly-weather" id="hourly-forecast"></div>
+
+    <div class="weather__info">
+      <div class="weather__card">
+        <i class="fa-solid fa-temperature-full"></i>
+        <div>
+          <p>Real Feel</p>
+          <p class="weather__realfeel">18&#176;</p>
+        </div>
+      </div>
+      <div class="weather__card">
+        <i class="fa-solid fa-droplet"></i>
+        <div>
+          <p>Humidity</p>
+          <p class="weather__humidity">18&#176;</p>
+        </div>
+      </div>
+      <div class="weather__card">
+        <i class="fa-solid fa-wind"></i>
+        <div>
+          <p>Wind</p>
+          <p class="weather__wind">18&#176;</p>
+        </div>
+      </div>
+      <div class="weather__card">
+        <i class="fa-solid fa-gauge-high"></i>
+        <div>
+          <p>Pressure</p>
+          <p class="weather__pressure">18&#176;</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hourly-item"></div>
+  </div>
+  <script src="https://kit.fontawesome.com/a692e1c39f.js" crossorigin="anonymous"></script>
+</body>
+</script>
+<script src="/assets/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/country-codes-list@1.14.0/dist/country-codes.min.js"></script>
+<script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/country-codes-list@1.14.0/dist/country-codes.min.js"></script>
+
+
+</html>

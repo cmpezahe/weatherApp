@@ -89,11 +89,12 @@ input::placeholder {
     /* color: var(--background-clr); */
     /* padding: 1rem; */
     /* color: var(--orang-clr); */
+    /* border-bottom: 1px solid var(--orang-clr); */
     box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);
 }
 
 .line {
-    height: 40px;
+    height: 20px;
     width: 1px;
     background-color: var(--style-clr);
     border: none;
@@ -158,22 +159,25 @@ input::placeholder {
 }
 
 .weather__forecast {
-    background: var(--gradient);
-    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);
+    /* background: var(--background-clr); */
+    /* box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2); */
     display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: 30px;
+    /* padding: 0.5rem 1rem; */
     font-size: 1.2rem;
-    border-top: 2px solid var(--orang-clr);
-    font-weight: 600;
+    /* font-weight: 600; */
     color: var(--orang-clr);
+    border-bottom: 1px solid var(--orang-clr);
+    display: none;
 }
 
 .weather__icon img {
     width: 100px;
-    background: var(--orang-clr);
+    /* background: var(--orang-clr); */
+    background: var(--gradient);
     margin: 1rem;
-    border-radius: 8px;
+    /* border-top: 1px solid var(--orang-clr); */
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
     box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15), -7px -7px 20px white, inset 0px 0px 4px rgba(255, 255, 255, 0.2);
 
 }

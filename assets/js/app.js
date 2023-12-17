@@ -30,9 +30,11 @@ function getWeather() {
     .then((res) => res.json())
     .then((data) => {
       // Update HTML elements with current weather information
-      city.innerHTML = `${data.name}, ${convertCountryCode(data.sys.country)}`;
+      // !Returns Full Country Name
+      // city.innerHTML = `${data.name}, ${convertCountryCode(data.sys.country)}`;
+      city.innerHTML = `${data.name}, ${data.sys.country}`;
       weather__forecast.innerHTML = `<p>${data.weather[0].main}`;
-      weather__temperature.innerHTML = `${data.main.temp.toFixed()}&#176`;
+      // weather__temperature.innerHTML = `${data.main.temp.toFixed()}&#176`;
       weather__icon.innerHTML = `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png" />`;
       weather__minmax.innerHTML = `<p>Min: ${data.main.temp_min.toFixed()}&#176</p><p>Max: ${data.main.temp_max.toFixed()}&#176</p>`;
       weather__realfeel.innerHTML = `${data.main.feels_like.toFixed()}&#176`;
@@ -40,6 +42,8 @@ function getWeather() {
       weather__wind.innerHTML = `${data.wind.speed} ${
         units === "imperial" ? "mph" : "m/s"
       }`;
+
+      console.log(data);
       weather__pressure.innerHTML = `${data.main.pressure} hPa`;
 
       // Fetch hourly forecast data
@@ -75,7 +79,7 @@ function displayHourlyForecast(hourlyData) {
       <div class="hourly-item">
         <span>${hour}:00</span>
         <img src="${iconUrl}" alt="Hourly Weather Icon">
-        <span>${temperature}°C</span>
+        <span>${temperature}&#176</span>
       </div>
     `;
 
